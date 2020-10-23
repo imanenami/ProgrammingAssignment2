@@ -36,7 +36,7 @@ cacheSolve <- function(M, ...) {
 
 test <- function() {
     M <- makeCacheMatrix()
-    M$set(matrix(runif(25,5,5)))
+    M$set(matrix(runif(25),5,5))
     cacheSolve(M)
     ## should return the cached data
     cacheSolve(M)      
