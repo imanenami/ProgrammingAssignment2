@@ -34,4 +34,10 @@ cacheSolve <- function(M, ...) {
     inverse
 }
 
-
+test <- function() {
+    M <- makeCacheMatrix()
+    M$set(matrix(runif(25,5,5)))
+    cacheSolve(M)
+    ## should return the cached data
+    cacheSolve(M)      
+}
