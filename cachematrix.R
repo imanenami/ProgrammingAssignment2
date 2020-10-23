@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## makeCacheMatrix() creates a special Cachable Matrix
+## cacheSolve() calculate the makeCacheMatrix inverse if it is not cached
+## test() is a test showing how different pieces work
 
-## Write a short comment describing this function
+## makeCacheMatrix gets a matrix as input and returns a list 
+## of methods to get/set the matrix  and its invers
 
 makeCacheMatrix <- function(M = matrix()) {
   inv <- NULL
@@ -18,9 +20,9 @@ makeCacheMatrix <- function(M = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve gets a makeCacheMatrix as input and calculates its invers
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(M, ...) {
     inv <- M$getinverse()
     if(!is.null(inv)) {
       message("getting cached data")
@@ -31,3 +33,5 @@ cacheSolve <- function(x, ...) {
     M$setinverse(inverse)
     inverse
 }
+
+
